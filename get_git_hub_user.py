@@ -12,6 +12,7 @@ def get_user():
     if data.status_code!=404:
         datas=data.json()
         df=pd.DataFrame(datas.items())
+        df=df.rename(columns={0:"Content",1:"Values"})
 
     else:
         print("Not Found! Try another name")
