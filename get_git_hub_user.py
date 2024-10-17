@@ -14,7 +14,7 @@ def get_user():
         datas=data.json()
         df=pd.DataFrame(datas.items())
         df.columns=['Key','Values']
-        if actions=='y' or 'Y':
+        if actions!='n' or 'N':
             df.to_csv('GitHub_user_details.csv',index=False)
         else: exit
 
